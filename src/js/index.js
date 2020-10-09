@@ -1,12 +1,12 @@
-console.clear();
-
 /**
  * Init modules
  */
 // Set verbosity of Logger to be (ALL, ERR, WARN, DEBUG), checkout the console output
-Logger.setVerbossityLevel(Logger.enum.verbosity.ALL);
+// Logger.setVerbossityLevel(Logger.enum.verbosity.ALL);
+
 // Init the DiceGame (mandatory)
-DiceGame.init({ logger: Logger, maxPlayerNumber: 2, winningScore: 20 });
+// DiceGame.init({ logger: Logger, maxPlayerNumber: 2, winningScore: 20 });
+DiceGame.init({ maxPlayerNumber: 2, winningScore: 20 });
 
 let currentTurnRoll = new Array(DiceGame.maxPlayerNumber).fill(0);
 

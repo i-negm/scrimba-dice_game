@@ -1,4 +1,4 @@
-const loggerVerbosity = {
+const Logger_loggerVerbosity = {
   NONE: 0,
   DEBUG: 1,
   WARN: 2,
@@ -6,7 +6,7 @@ const loggerVerbosity = {
   ALL: 7
 };
 
-function debug(msg) {
+function Logger_debug(msg) {
   if (this.level & this.enum.verbosity.DEBUG) {
     console.log("[DEBUG]: " + msg);
   } else {
@@ -14,7 +14,7 @@ function debug(msg) {
   }
 }
 
-function error(msg) {
+function Logger_error(msg) {
   if (this.level & this.enum.verbosity.ERROR) {
     console.error("[ERROR]: " + msg);
   } else {
@@ -22,7 +22,7 @@ function error(msg) {
   }
 }
 
-function warn(msg) {
+function Logger_warn(msg) {
   if (this.level & this.enum.verbosity.WARN) {
     console.warn("[WARN]: " + msg);
   } else {
@@ -30,17 +30,18 @@ function warn(msg) {
   }
 }
 
-function setVerbosityLevel(level) {
+function Logger_setVerbosityLevel(level) {
   this.level = level;
+  this.debug("Logger verbosity = " + this.level);
 }
 
 const Logger = {
-  level: loggerVerbosity.NONE,
-  debug: debug,
-  error: error,
-  warn: warn,
+  level: this.enum.verbosity.NONE,
+  debug: Logger_debug,
+  error: Logger_error,
+  warn: Logger_warn,
   enum: {
-    verbosity: loggerVerbosity
+    verbosity: Logger_loggerVerbosity
   },
-  setVerbosityLevel: setVerbosityLevel
+  setVerbosityLevel: Logger_setVerbosityLevel
 };
