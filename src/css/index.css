@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Yanone Kaffeesatz", "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif;
+}
+
+.container {
+  max-width: 780px;
+  margin: 0px auto;
+  text-align: center;
+  background: #2e2171;
+  color: white;
+  font-weight: lighter;
+}
+
+.header {
+  background: #030013;
+  color: #f2e7f5;
+  padding: 10px;
+}
+.title {
+  font-weight: lighter;
+}

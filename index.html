@@ -4,26 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./src/css/index.css" />
+    <link rel="stylesheet" href="./src/css/dice-game.css" />
     <title>Static Template</title>
   </head>
   <body>
     <div class="container">
-      <h1 id="message">
+      <div class="header">
+        <h1 class="title">Dice Game</h1>
+      </div>
+      <h2 id="message">
         Player #1 turn!
-      </h1>
+      </h2>
       <div class="players">
         <div id="player1">
-          <h1>
+          <h2>
             Score:
             <span id="player1ScoreBoard">0</span>
-          </h1>
+          </h2>
           <div id="player1Dice" class="dice active">-</div>
         </div>
         <div id="player2">
-          <h1>
+          <h2>
             Score:
             <span id="player2ScoreBoard">0</span>
-          </h1>
+          </h2>
           <div id="player2Dice" class="dice">-</div>
         </div>
       </div>
